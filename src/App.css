@@ -1,38 +1,102 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  overflow: hidden;
+  max-height: 100vh;
   min-height: 100vh;
+  height: 100vh;
+  background-color: #282c34;
+
+}
+
+.app-name {
+  font-family: Courier, serif;
+  color: #ffffff;
+  padding-top: 10%;
+  padding-bottom: 7%;
+  font-size: 50px;
+}
+
+.nav-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-button {
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #404754;;
+}
+
+.new-game-container {
+  padding: 4%;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-game-info{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.new-game-subinfo{
+  position: fixed;
+  top: 70px;
+  left: 22px;
+  color: #ffffff;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  box-sizing: border-box;
+  height: 100%
 }
 
-.App-link {
-  color: #61dafb;
+.no-words {
+  max-height: 300px;
+  max-width: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 2%;
+
+
+}
+
+.card {
+  width: 16%;
+  height: 14%;
+  margin: 1%;
+  border: solid 2px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #757c8b;
+
+
+
 }

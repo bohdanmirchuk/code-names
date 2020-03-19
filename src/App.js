@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import NewGame from './components/newGame/NewGame';
 import './App.css';
 
-function App() {
+const App = () => {
+
+  const [newGame, setNewGame] = useState(false);
+  const [gameId, setGameId] = useState(null);
+
+  const handleClickNewGame = () => {
+    let id = 'a' + (Math.floor(Math.random() * 10) + 1);
+    setNewGame(true);
+    setGameId(id);
+  };
+
+  if (newGame) {
+    return (
+      <div className="App">
+        <NewGame gameId={gameId} setNewGame={setNewGame}/>
+      </div>
+    )
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="app-name">Code names</header>
+      <div className="nav-container">
+        <div className="nav-button" onClick={handleClickNewGame}>Нова гра</div>
+      </div>
+
     </div>
   );
 }
